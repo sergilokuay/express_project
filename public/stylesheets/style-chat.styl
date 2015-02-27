@@ -1,0 +1,120 @@
+/*
+ * Import nib
+ */
+@import 'nib'
+
+/*
+ * Grab a custom font from Google
+ */
+@import url('http://fonts.googleapis.com/css?family=Quicksand')
+
+/*
+ * Nib provides a CSS reset
+ */
+global-reset()
+
+/*
+ * Store the main color and
+ * background color as variables
+ */
+main-color = #fa5b4d
+background-color = #faf9f0
+
+body
+  font-family 'Georgia'
+  background-color background-color
+  color #444
+
+header
+  font-family 'Quicksand'
+  padding 50px 10px
+  color #fff
+  font-size 25px
+  text-align center
+
+  /*
+   * Note the use of the `main-color`
+   * variable and the `darken` function
+   */
+  background-color main-color
+  border-bottom 1px solid darken(main-color, 30%)
+  text-shadow 0px -1px 0px darken(main-color, 30%)
+
+#title{
+    text-align: center;
+}
+ 
+.panel-heading{
+    text-align: center;
+    height: 45px;
+}
+ 
+.head{
+    margin-top: 10px;
+}
+ 
+#containerMessages,#containerUsers{
+    height: 200px;
+    overflow-y: scroll;
+    border: 1px solid darken(main-color, 30%);
+    margin-bottom: 15px;
+    background: darken(main-color,50%);
+}
+ 
+.message{
+    padding: 5px 2px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+}
+ 
+#formModal{
+    top: 15%;
+}
+ 
+#loginBtn{
+    width: 100%;
+}
+ 
+#formLogin{
+    margin-top: 15px;
+}
+ 
+.errorMsg{
+    height: 50px;
+    text-align: center;
+    margin-top: 10px;
+}
+ 
+.info{
+    height: 30px;
+    font-size: 14px;
+    padding: 3px 10px;
+    color: #3a87ad;
+    background-color: #d9edf7;
+    border: 1px solid #bce8f1;
+    border-radius: 6px;
+}
+ 
+.disconnect{
+    height: 30px;
+    font-size: 14px;
+    padding: 3px 10px;
+    color: #3a87ad;
+    background-color: #d9edf7;
+    border: 1px solid #bce8f1;
+    border-radius: 6px;
+}
+#chatMsgs p,#containerUsers p{
+    border-radius: 2px;
+    padding: 4px;
+}
+
+p
+  line-height 1.8
+
+footer
+  width auto
+  margin 50px auto
+  border-top 1px dotted #ccc
+  padding-top 5px
+  font-size 13px
